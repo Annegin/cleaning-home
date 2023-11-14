@@ -147,7 +147,129 @@
                         <div class="col-lg-12 col-12">
                             <h2 class="mb-4">Калькулятор</h2>
                         </div>
-                       
+                        <div class="container_cal">
+      <form action="#" class="form form1">
+        <div class="form__item">
+          <h2 class="heading">Выберите свой тариф</h2>
+          <ul class="switcher">
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="tariff"
+                id="economy"
+                class="tariff"
+                value="economy"
+              />
+              <label for="economy">Эконом</label>
+            </li>
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="tariff"
+                id="standart"
+                class="tariff"
+                value="standart"
+                checked="checked"
+              />
+              <label for="standart">Стандарт</label>
+            </li>
+            
+            <li class="switcher__item">
+              <input
+                type="radio"
+                name="tariff"
+                id="premium"
+                class="tariff"
+                value="premium"
+              />
+              <label for="premium">Премиум</label>
+            </li>
+          </ul>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Сколько часов работаем? (минимум 1 час)</h2>
+          <div class="slider">
+            <input
+              type="range"
+              name="time"
+              id="time"
+              step="1"
+              min="1"
+              max="96"
+              value="1"
+            />
+            <output id="volume" for="time">1</output>
+          </div>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Дополнительные услуги</h2>
+          <div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option1"
+                id="option1"
+                class="option"
+              />
+              <label for="option1" class="checkmark"></label>
+              <label for="option1">Глажка белья (300 рублей)</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option2"
+                id="option2"
+                class="option"
+              />
+              <label for="option2" class="checkmark"></label>
+              <label for="option2">Химчистка (500 рублей)</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option3"
+                id="option3"
+                class="option"
+              />
+              <label for="option3" class="checkmark"></label>
+              <label for="option3">Мытье посуды (300 рублей)</label>
+            </div>
+            <div class="option__item">
+              <input
+                type="checkbox"
+                name="option4"
+                id="option4"
+                class="option"
+              />
+              <label for="option4" class="checkmark"></label>
+              <label for="option4">Мытье окон (500 рублей)</label>
+            </div>
+          </div>
+        </div>
+      </form>
+      <form action="#" class="form form2">
+        <div class="form__item">
+          <h2 class="heading">Ваш заказ</h2>
+          <div class="order">
+            <span>Тариф:</span>
+            <output id="order_tariff">—</output>
+          </div>
+          <div class="order">
+            <span>Время работы:</span>
+            <output id="order_time">—</output>
+          </div>
+          <div class="order">
+            <span>Дополнительно:</span>
+            <output id="order_option">—</output>
+          </div>
+        </div>
+        <div class="form__item">
+          <h2 class="heading">Итоговая стоимость поездки</h2>
+          <output class="total" id="total">0</output>
+        </div>
+      </form>
+    </div>
+    <script src="js/calculator.js"></script>
                     </div>
                 </div>
             </section>
