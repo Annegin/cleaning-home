@@ -39,7 +39,7 @@ body {
 
 
 .form {
-  border: 1.5px solid black;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.23);
   width: 50%;
   height: 60%;
   background-color: #fff;
