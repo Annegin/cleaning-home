@@ -73,6 +73,7 @@ body {
 
 .switcher {
   display: flex;
+  list-style-type:none;
 }
 
 .switcher__item input {
