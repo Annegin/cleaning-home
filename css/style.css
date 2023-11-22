@@ -25,7 +25,12 @@ body {
   box-sizing: border-box;
 } 
 
-
+.team{
+  padding-top: 50px
+}
+.team-im {
+  padding-top: 50px;
+}
 
 .container_cal {
   max-width: 1200px;
