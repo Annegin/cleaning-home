@@ -5,7 +5,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 *,
 *::after,
 *::before {
@@ -25,11 +24,15 @@ body {
   box-sizing: border-box;
 } 
 
-.team{
-  padding-top: 50px
+@media (max-width: 768px) {
+  .row {
+      flex-wrap: nowrap; /* Запретить перенос элементов на новую строку */
+      overflow-x: auto;  /* Добавить горизонтальный скролл при необходимости */
+  }
 }
-.team-im {
-  padding-top: 50px;
+.order,
+.total {
+    font-size: 18px; /* Регулируйте значение по вашему вкусу */
 }
 
 .container_cal {
@@ -45,8 +48,6 @@ body {
 
 .form {
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.23);
-  width: 50%;
-  height: 60%;
   background-color: #fff;
   border-radius: 25px;
   padding: 30px;
@@ -58,7 +59,6 @@ body {
   flex-basis: 650px;
   flex-shrink: 0;
   flex-grow: 0;
-  margin-right: 50px;
 }
 
 .form2 {

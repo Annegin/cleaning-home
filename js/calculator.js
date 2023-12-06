@@ -1,3 +1,7 @@
+// Добавьте этот код в вашем файле calculator.js
+
+let totalPrice = 0;  // Глобальная переменная для хранения итоговой стоимости
+
 const tariff = Array.from(document.querySelectorAll(".tariff"));
 const option = Array.from(document.querySelectorAll(".option"));
 const time = document.querySelector("#time");
@@ -46,8 +50,8 @@ function optionUpdate(e) {
 function updatePrice() {
   let tariffPrice = currentSet.getTariffPrice();
   let optionPrice = currentSet.getOptionPrice();
-  let totalPrice = currentSet.time * tariffPrice + optionPrice;
-  total.value = totalPrice;
+  totalPrice = currentSet.time * tariffPrice + optionPrice;  // Обновление глобальной переменной
+  total.value = totalPrice.toLocaleString() + ' ₽';
 }
 
 function orderUpdate() {
@@ -56,8 +60,9 @@ function orderUpdate() {
   } else {
     orderTime.value = currentSet.time + " часов";
   }
-  orderTariff.value = currentSet.getTariffPrice() + " \u{20BD}/час";
-  orderOption.value = currentSet.getOptionPrice() + " \u{20BD}";
+  orderTariff.textContent = currentSet.getTariffPrice() + " ₽/час";
+  orderOption.textContent = currentSet.getOptionPrice() + " ₽";
+
 }
 
 const priceInfo = {
@@ -91,3 +96,9 @@ let currentSet = {
     return optionPrice;
   },
 };
+
+// Функция обновления итоговой стоимости с добавлением символа рубля
+function updateTotal(cost) {
+    const totalElement = document.getElementById('total');
+    totalElement.textContent = cost.toLocaleString() + ' ₽';
+}
