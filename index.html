@@ -230,26 +230,33 @@
                                     </div>
                                 </div>
                                 <hr class="my-4">
-                                <!-- Код второй формы добавлен в конец первой формы -->
                                 <div class="form__item mb-3">
-                                    <h2 class="heading mb-3">Ваш заказ</h2>
-                                    <div class="ordermb-3">
-                                        <span>Тариф:</span>
-                                        <output id="order_tariff">—</output>
+                                    <h2 class="heading">Ваш заказ</h2>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form__item mb-3">
+                                                    <h2 class="heading mb-3">Тариф</h2>
+                                                    <output id="order_tariff">—</output>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form__item mb-3">
+                                                    <h2 class="heading mb-3">Время работы</h2>
+                                                    <output id="order_time">—</output>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form__item mb-3">
+                                                    <h2 class="heading mb-3">Дополнительно</h2>
+                                                    <output id="order_option">—</output>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="ordermb-3">
-                                        <span>Время работы:</span>
-                                        <output id="order_time">—</output>
+                                    <div class="form__item mb-3">
+                                        <h2 class="heading h4 mb-3">Итоговая стоимость: <output class="total" id="total">0₽</output></h2>
                                     </div>
-                                    <div class="ordermb-3">
-                                        <span>Дополнительно:</span>
-                                        <output id="order_option">—</output>
-                                    </div>
-                                </div>
-                                <div class="form__item mb-3">
-                                    <h2 class="heading h4 mb-3">Итоговая стоимость</h2>
-                                    <output class="total" id="total">0₽</output>
-                                </div>
                             </form>
                         </div>
             
